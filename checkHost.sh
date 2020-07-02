@@ -17,7 +17,7 @@ if [ $? -eq 0 ]
 then
     echo $(date +%F) : $(date +%X) : ${1} "is UP" >> $LOG_FILE
     #rsync ~/Desktop/testData/* root@192.168.1.135:/var/media/Elements/test
-    scp log.txt root@192.168.1.135:/var/media/Elements/test
+    scp log.txt root@$1:/var/media/Elements/test
 else
     echo $(date +%F) : $(date +%X) : ${1} "is DOWN" >> $LOG_FILE
 fi
